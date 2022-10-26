@@ -24,7 +24,7 @@ public class ApiGatewayConfig {
      * Authen SERVICE
      */
     private String authenServicePath = "/api/auth/**";
-    private String authenServiceUri = "lb://VTIOBYS-AUTHEN-SERVICE";
+    private String authenServiceUri = "lb://MICROSERVICE-AUTHEN-SERVICE";
 
     /**
      * Driver SERVICE

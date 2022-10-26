@@ -6,6 +6,7 @@ import com.example.api_gateway.response.ConnValidatorResponse;
 import com.example.api_gateway.response.ExceptionResponseModel;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.checkerframework.checker.units.qual.A;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -51,6 +52,9 @@ public class AuthenticationPreFilter extends
 
     @Override
     public GatewayFilter apply(ApiGatewayConfig apiGatewayConfig) {
+
+        System.out.println("*********"+apiGatewayConfig+"*******");
+
         return (exchange, chain) -> {
             ServerHttpRequest request = exchange.getRequest();
             LOGGER.info("************************************************************************");
